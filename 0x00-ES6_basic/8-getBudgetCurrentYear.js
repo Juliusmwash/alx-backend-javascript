@@ -3,21 +3,15 @@ function getCurrentYear() {
   return date.getFullYear();
 }
 
-class budget {
+class Budget {
   constructor(income, gdp, capita) {
-    this.`income-${getCurrentYear()}` = income;
-    this.`gdp-${getCurrentYear()}` = gdp;
-    this.`capita-${getCurrentYear()}` = capita;
+    this[`income-${getCurrentYear()}`] = income;
+    this[`gdp-${getCurrentYear()}`] = gdp;
+    this[`capita-${getCurrentYear()}`] = capita;
   }
 }
 
 export default function getBudgetForCurrentYear(income, gdp, capita) {
-  class budget {
-    constructor(income, gdp, capita) {
-      this.`income-${getCurrentYear()}` = income;
-      this.`gdp-${getCurrentYear()}` = gdp;
-      this.`capita-${getCurrentYear()}` = capita;
-    }
-  }
-  return budget(income, gdp, capita);
+  return new Budget(income, gdp, capita);
 }
+
