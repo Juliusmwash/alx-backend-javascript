@@ -14,4 +14,3 @@ class Budget {
 export default function getBudgetForCurrentYear(income, gdp, capita) {
   return new Budget(income, gdp, capita);
 }
-
