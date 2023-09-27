@@ -1,0 +1,5 @@
+./node_modules/.bin/eslint path/to/your-file.js
+npm run lint -- path/to/your-file.js
+
+
+That is based on my configuration files
