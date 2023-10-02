@@ -1,0 +1,18 @@
+#!/usr/bin/node
+
+export default function updateStudentGradeByCity(array, city, newGrades) {
+  const filteredArray = array.filter((obj) => {
+    return obj.location === city;
+  });
+
+  const updatedArray = filteredArray.map((obj) => {
+    newGrades.forEach((gradeObj) => {
+      if (gradeObj.id === newGrades.id) {
+        return { ...gradeObj, grades: newGrades.grades };
+      } else {
+        return { ...obj, grades: 'N/A' };
+      }
+    });
+  });
+  return updatedArray;
+}
