@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function updateStudentGradeByCity(array, city, newGrades) {
+export default function updateStudentGradeByCity(array, city, newGrades) {
   const filteredArray = array.filter((obj) => obj.location === city);
 
   const updatedArray = filteredArray.map((obj) => {
@@ -13,5 +13,3 @@ function updateStudentGradeByCity(array, city, newGrades) {
 
   return updatedArray;
 }
-
-module.exports = updateStudentGradeByCity;
