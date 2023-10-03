@@ -1,0 +1,14 @@
+export default function updateStudentGradeByCity(array, city, newGrades) {
+
+  if (!(Array.isArray(array)) ||
+    !(Array.isArray(newGrades))){
+    return [];
+  }
+  return array.filter((obj) => obj.location === city).map((obj) => {
+    const matchingGrade = newGrades.find((gradeObj) => gradeObj.studentId === obj.id);
+    if (matchingGrade) {
+      return { ...obj, grades: matchingGrade.grade };
+    }
+    return { ...obj, grades: 'N/A' };
+  });
+}
