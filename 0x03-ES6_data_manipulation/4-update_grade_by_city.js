@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 export default function updateStudentGradeByCity(array, city, newGrades) {
   const filteredArray = array.filter((obj) => obj.location === city);
 

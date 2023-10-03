@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 function groceriesList() {
   const groceryMap = new Map();
 

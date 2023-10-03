@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 function cleanSet(set, startString) {
   let result = '';
   for (const value of set) {

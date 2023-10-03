@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 const weakMap = new WeakMap();
 
 function queryAPI(endpoint) {
